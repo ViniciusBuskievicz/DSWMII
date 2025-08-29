@@ -9,13 +9,14 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void{
+    public function up(): void
+    {
         Schema::create('tarefas', function (Blueprint $table) {
             $table->id(); // Cria um campo ID autoincrementável
             $table->string('titulo'); // Define um campo de texto para o título
             $table->text('descricao')->nullable(); // Define um campo de texto que pode ser nulo
             $table->timestamps(); // Cria os campos created_at e updated_at automaticamente
-        });
+            });
     }
 
     /**
